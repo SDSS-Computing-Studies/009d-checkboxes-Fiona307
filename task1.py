@@ -131,29 +131,140 @@ def decimal_to_binary(decimal):
                                 #80
                                 else:
                                     answer.append(0)
+                #40
                 else:
                     answer.append(0)
+                    #51
                     if decimal-128-64-32 >= 8:
                         answer.append(1)
-                    else:
-                        answer.append(0)
-                        if decimal-128-64-32 >= 4:
+                        #61
+                        if decimal-128-64-32-8 >= 4:
                             answer.append(1)
-                        else:
-                            answer.append(0)
-                            if decimal-128-64-32 >= 2:
+                            #71
+                            if decimal-128-64-32-8-4 >= 2:
                                 answer.append(1)
-                            else:
-                                answer.append(0)
-                                if decimal-128-64-32 >= 1:
+                                #81
+                                if decimal-128-64-32-8-4-2 >= 1:
                                     answer.append(1)
+                                #80
                                 else:
                                     answer.append(0)
+                            #70
+                            else:
+                                answer.append(0)
+                                #81
+                                if decimal-128-64-32-8-4 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                        #60
+                        else:
+                            answer.append(0)
+                            #71
+                            if decimal-128-64-32-8 >= 2:
+                                answer.append(1)
+                                #81
+                                if decimal-128-64-32-8-2 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                            #70
+                            else:
+                                answer.append(0)
+                                #81
+                                if decimal-128-64-32-8 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                    #50
+                    else:
+                        answer.append(0)
+                        #61
+                        if decimal-128-64-32 >= 4:
+                            answer.append(1)
+                            #71
+                            if decimal-128-64-32-4 >= 2:
+                                answer.append(1)
+                                #81
+                                if decimal-128-64-32-4-2 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                            #70
+                            else:
+                                answer.append(0)
+                                #81
+                                if decimal-128-64-32-4 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                        #60
+                        else:
+                            answer.append(0)
+                            #71
+                            if decimal-128-64-32 >= 2:
+                                answer.append(1)
+                                #81
+                                if decimal-128-64-32-2 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                            #70
+                            else:
+                                answer.append(0)
+                                #81
+                                if decimal-128-64-32 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+            #30
             else:
                 answer.append(0)
+                #41
+                if decimal-128-64 >= 16:
+                    answer.append(1)
+                    #51
+                    if decimal-128-64-16 >= 8:
+                        answer.append(1)
+                        #61
+                        if decimal-128-64-16-8 >= 4:
+                            answer.append(1)
+                            #71
+                            if decimal-128-64-16-8-4 >= 2:
+                                answer.append(1)
+                                #81
+                                if decimal-128-64-16-8-4-2 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                            #70
+                            else:
+                                answer.append(0)
+                                #81
+                                if decimal-128-64-16-8-4 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                        #60
+                        else:
+                            answer.append(0)
+                    #50
+                    else:
+                        answer.append(0)
+                #40
+                else:
+                    answer.append(0)
         else:
             answer.append(0)
-
     else:
         answer.append(0)
     binary = (answer[0],answer[1],answer[2],answer[3],answer[4],answer[5],answer[6],answer[7])
