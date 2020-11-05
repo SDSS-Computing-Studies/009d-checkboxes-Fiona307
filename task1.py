@@ -350,11 +350,90 @@ def decimal_to_binary(decimal):
                         #60
                         else:
                             answer.append(0)
+                            #71
+                            if decimal-128-64-8 >= 2:
+                                answer.append(1)
+                                #81
+                                if decimal-128-64-8-2 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                            #70
+                            else:
+                                answer.append(0)
+                                #81
+                                if decimal-128-64-8 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
                     #50
                     else:
                         answer.append(0)
+                        #61
+                        if decimal-128-64 >= 4:
+                            answer.append(1)
+                            #71
+                            if decimal-128-64-4 >= 2:
+                                answer.append(1)
+                                #81
+                                if decimal-128-64-4-2 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                            #70
+                            else:
+                                answer.append(0)
+                                #81
+                                if decimal-128-64-4 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                        #60
+                        else:
+                            answer.append(0)
+                            #71
+                            if decimal-128-64 >= 2:
+                                answer.append(1)
+                                #81
+                                if decimal-128-64-2 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+                            #70
+                            else:
+                                answer.append(0)
+                                #81
+                                if decimal-128-64 >= 1:
+                                    answer.append(1)
+                                #80
+                                else:
+                                    answer.append(0)
+        #20
         else:
             answer.append(0)
+            #31
+            if decimal-128 >= 32:
+                answer.append(1)
+                #41
+                if decimal-128-32 >= 16:
+                    answer.append(1)
+                    #51
+                    if decimal-128-32-16 >= 8:
+                        answer.append(1)
+                    #50
+                    else:
+                        answer.append(0)
+                #40
+                else:
+                    answer.append(0)
+            #30
+            else:
+                answer.append(0)
     else:
         answer.append(0)
     binary = (answer[0],answer[1],answer[2],answer[3],answer[4],answer[5],answer[6],answer[7])
