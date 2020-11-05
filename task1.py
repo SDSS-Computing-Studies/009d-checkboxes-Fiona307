@@ -756,12 +756,48 @@ def decimal_to_binary(decimal):
                             answer.append(1)
                             if decimal-64-32-8-4 >= 2:
                                 answer.append(1)
+                                if decimal-64-32-8-4-2 >= 1:
+                                    answer.append(1)
+                                else:
+                                    answer.append(0)
                             else:
                                 answer.append(0)
+                                if decimal-64-32-8-4 >= 1:
+                                    answer.append(1)
+                                else:
+                                    answer.append(0)
                         else:
                             answer.append(0)
+                            if decimal-64-32-8 >= 2:
+                                answer.append(1)
+                                if decimal-64-32-8-2 >= 1:
+                                    answer.append(1)
+                                else:
+                                    answer.append(0)
+                            else:
+                                answer.append(0)
+                                if decimal-64-32-8 >= 1:
+                                    answer.append(1)
+                                else:
+                                    answer.append(0)
                     else:
                         answer.append(0)
+                        if decimal-64-32 >= 4:
+                            answer.append(1)
+                            if decimal-64-32-4 >= 2:
+                                answer.append(1)
+                                if decimal-64-32-4-2 >= 1:
+                                    answer.append(1)
+                                else:
+                                    answer.append(0)
+                            else:
+                                answer.append(0)
+                                if decimal-64-32-4 >= 1:
+                                    answer.append(1)
+                                else:
+                                    answer.append(0)
+                        else:
+                            answer.append(0)
             else:
                 answer.append(0)
         else:
