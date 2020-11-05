@@ -744,8 +744,24 @@ def decimal_to_binary(decimal):
                                     answer.append(0)
                             else:
                                 answer.append(0)
+                                if decimal-64-32-16 >= 1:
+                                    answer.append(1)
+                                else:
+                                    answer.append(0)
                 else:
                     answer.append(0)
+                    if decimal-64-32 >= 8:
+                        answer.append(1)
+                        if decimal-64-32-8 >= 4:
+                            answer.append(1)
+                            if decimal-64-32-8-4 >= 2:
+                                answer.append(1)
+                            else:
+                                answer.append(0)
+                        else:
+                            answer.append(0)
+                    else:
+                        answer.append(0)
             else:
                 answer.append(0)
         else:
