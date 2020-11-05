@@ -800,7 +800,7 @@ def decimal_to_binary(decimal):
                             answer.append(0)
                             if decimal-64-32 >= 2:
                                 answer.append(1)
-                                if decimal-64-32-2 >= 1：
+                                if decimal-64-32-2 >= 1:
                                     answer.append(1)
                                 else:
                                     answer.append(0)
