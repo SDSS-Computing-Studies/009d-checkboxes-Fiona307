@@ -29,8 +29,17 @@ def binary_to_decimal(binary):
 def decimal_to_binary(decimal):
     # decimal is an integer value
     # binary is a tuple of length 8 that contains 1's and 0's
-    if decimal > 1:
-        
+    binary = []
+    while decimal >= 1:
+        binary.append(decimal%2)
+        decimal = decimal//2
+    length = len(binary)
+    for i in range(0,(8-length)):
+        binary.append(0)
+    for i in range(0,8):
+        binary.append(binary[7-i])
+    for i in range(0,8):
+        binary.pop(0)
     return binary
 
 
@@ -38,8 +47,8 @@ def get_binary():
     # function should read the entry widget and generate an integer
     # this integer will be used as an input parameter for decimal to binary and the result updated
     # in the 8 checkboxes
-    decimal = e1.get()
-    binary = binary_to_decimal(decimal)
+    decimal = int(e1.get())
+    binary = decimal_to_binary(decimal)
     state1.set(binary[0])
     state2.set(binary[1])
     state3.set(binary[2])
@@ -63,11 +72,10 @@ def get_decimal():
     binary.append(state7.get())
     binary.append(state8.get())
     decimal = binary_to_decimal(binary)
+    e1.delete(0,END)
     e1.insert(0,str(decimal))
 
 win = tk.Tk()
-
-
 
 b1 = tk.Button(win, text="Convert to Binary", command=get_binary)
 b2 = tk.Button(win, text="Convert to Decimal", command=get_decimal)
